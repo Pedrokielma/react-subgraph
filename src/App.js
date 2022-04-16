@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { createClient } from 'urql'
+import { useEffect, useState } from 'react'
 import './App.css';
+
+const APIURL = ""
+
+const query = `
+  query {
+    tokens(
+      first: 5
+      orderBy: tokenID
+      orderDirection:desc
+    ) {
+      id
+      tokenID
+      contentURI
+      metadataURI
+    }
+  }
+  `
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
     </div>
   );
 }
