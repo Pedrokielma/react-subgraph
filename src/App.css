@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@300;500&display=swap');
+
+/* *, *::before{
+  background-color: #90a9bf20;
+} */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  
+ }
+
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  width: auto;
+  /* background-color: #90a9bf76; */
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
