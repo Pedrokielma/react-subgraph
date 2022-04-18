@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Searchbar.css'
 import { FiSearch } from 'react-icons/fi'
 
+
 function Searchbar(props) {
   const [search, setSearch] = useState('');
 

@@ -1,0 +1,20 @@
+.nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 70px;
+    background-color: #191B1F;
+}
+.nav a{
+    color: #E80D71;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+font-size: 25px;
+
+
+}
+.nav a:hover{
+    color: #E80D71;
+}

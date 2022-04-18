@@ -1,19 +1,19 @@
 import { createClient } from 'urql'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 
 
 
 const APIURL = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2"
-//(orderBy: tradeVolumeUSD, orderDirection: desc)
+
 
 
   const client = createClient({
     url: APIURL
   })
 
-//   getUser($input: "0x00000000000045166c45af0fc6e4cf31d9e14b9a")
 
 
 function TokenDetails() {
@@ -80,7 +80,8 @@ function TokenDetails() {
   return (
 
     // {weather ? <div className="temp">{Math.round(weather.main.temp)}°c</div> : null}
-    <>
+    <div>
+    <Navbar />
    
 
         {!fetching && 
@@ -114,18 +115,8 @@ function TokenDetails() {
     
     </div> 
     }
-    
-
-    
-    </>
-  
-    
-
-
-
+    </div>
    
-    
-    
   )
 }
 

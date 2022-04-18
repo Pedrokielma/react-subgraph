@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;500&display=swap');
 
 /* *, *::before{
   background-color: #90a9bf20;
@@ -9,19 +9,15 @@
   margin: 0;
   padding: 0;
   overflow: auto;
-  
+  position: relative;
  }
 
 .App {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
   width: auto;
-  /* background-color: #90a9bf76; */
+
 }
 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}

@@ -2,13 +2,21 @@ import { createClient } from 'urql'
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import Searchbar from '../Searchbar/Searchbar';
+import Navbar from '../Navbar/Navbar';
+
+import './TokensList.css'
 
 
 const APIURL = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2"
 
 const query = `
 {
-    tokens {
+    tokens (
+      orderBy: tradeVolumeUSD,
+      orderDirection: desc,
+      first: 500
+      
+    ) {
         id
       symbol
       name
@@ -50,7 +58,8 @@ function TokensList() {
     };
 
   return (
-    <div>
+    <div className='main-page'>
+    <Navbar />
     <h2>Token List</h2>
     <Searchbar  search={searchFilter} />
     {displayTokens.map((token)=>{
