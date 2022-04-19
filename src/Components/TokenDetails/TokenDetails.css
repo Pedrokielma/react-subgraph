@@ -1,0 +1,108 @@
+.pairs-page-title{
+    margin: 80px;
+    margin-left: 10%;
+    color: white;
+}
+.pairs-page-title h2{
+    color: white;
+    display: flex;
+    font-size: 25px;
+    font-weight: 600, Semi Bold;
+}
+.list-pair-section{
+    display: flex;
+    justify-content: center;
+}
+.list-pair-section hr{
+    border-bottom: none;
+    height: 1px;
+}
+
+.list-pair{
+    background-color: #40364B;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.format-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+
+.title-list-pair{
+    margin-top: 80px;
+    margin-bottom: 60px;
+    color: #E80D71;
+
+}
+
+
+.single-pair{
+   
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    
+    
+}
+
+
+.paragrf1{
+    display: flex;
+    width: 290px;
+}
+.paragrf2{
+    width: 70px;
+    display: flex;
+}
+.paragrf3{
+    width: 130px;
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .paragrf2{
+       display: none;
+    } 
+    .paragrf1{
+        display: flex;
+        width: 200px;
+    }
+}
+
+
+.back-btn-div{
+    display: flex;
+    justify-content: center;
+}
+
+.back-btn-div a{
+    display: flex;
+   justify-content: space-around;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family:'Inter', sans-serif;
+    margin: 60px;
+    background-color: #4C4D8F;
+    
+    width: 160px;
+    height: 48px;
+    border-radius: 6px;
+}
+.back-btn-div span{
+    margin-top: 14px;
+    margin-right: 20px;
+}
+.back-btn-div a:hover {
+color: white;
+}
+.react-icon-back{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #E80D71;
+    font-size: 25px;
+   
+}

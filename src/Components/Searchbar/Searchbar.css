@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     border-style: ridge;
-    margin: 50px;
+    margin-left: 80px;
     
     width: 280px;
     height: 45px;
@@ -31,3 +31,6 @@
     margin-left: 5px;
     color: #E80D71;
 }
+
+
+

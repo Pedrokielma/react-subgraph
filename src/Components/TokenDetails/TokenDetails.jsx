@@ -1,7 +1,10 @@
 import { createClient } from 'urql'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import './TokenDetails.css'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+
 
 
 
@@ -27,26 +30,22 @@ function TokenDetails() {
 
     const query = `
     {
-        pairs (where: {
+      pairs (
+          orderDirection: desc,
+        orderBy:reserveUSD
+        where: {
           token0: "${tokenId}"
-        }){
-          id
-          token0{
-             symbol
-                  name
-                  symbol
-              totalSupply
-            tradeVolumeUSD
-            totalLiquidity
-          }
-          token1{
-            symbol
-            name
-            id
-          }
-          
         }
+          
+        ) {
+           token1{
+          name
+          symbol
+        }
+       
+        reserveUSD
       }
+    }
     `
 
   
@@ -82,39 +81,47 @@ function TokenDetails() {
     // {weather ? <div className="temp">{Math.round(weather.main.temp)}°c</div> : null}
     <div>
     <Navbar />
-   
+   <div className='pairs-page-title'>
+    <h2>These are the tokens you can exchange for in Uniswapp</h2>
+    </div>
+    <section className='list-pair-section'>
+    <div className='list-pair'>
+    <>
+    <div className='title-list-pair format-list'>
+      <p className='paragrf1'>Name</p>
+      <p className='paragrf2'>Symbol</p>
+      <p className='paragrf3'>Liquidity of pair</p>
+    </div>
+    <hr />
+    </>
 
+    <div className='list-body'>
         {!fetching && 
-            <div>
-        <h2>Token Detail</h2>
-        <h3>{token[0].id}</h3>
-    <h3>{token[0].token0.name}</h3>
-    <h3>{token[0].token0.symbol}</h3>
-    <h3>{token[0].token0.totalSupply}</h3>
-    <h3>{token[0].token0.tradeVolumeUSD}</h3>
-    <h3>{token[0].token0.totalLiquidity}</h3>
-
-
-            <h2>Show tokens there you can exchange for in Uniswapp</h2>
-     
-    <button onClick={() => setCompatibleTokens(!compatibleTokens)}>
-        { compatibleTokens? "Hide" : "Show"}
-      </button>
-          
-          
-          {compatibleTokens && token.map((pairToken) => {
+            <div>    
+    
+          {token.map((pairToken) => {
              return (
-                 <div>
-                 <h2>{pairToken.token1.name}</h2>
-                 <h3>{pairToken.token1.symbol}</h3>
+               <>
+                 <div className='single-pair format-list'>
+                 <p className='paragrf1'>{pairToken.token1.name}</p>
+                 <p className='paragrf2'>{pairToken.token1.symbol}</p>
+                 <p className='paragrf3'>{Number(pairToken.reserveUSD).toFixed(2)} $</p>
+
                  </div>
+                 <hr />
+                 </>
              )
             })}
 
-
-    
-    </div> 
+            </div>
     }
+    <div className='back-btn-div'>
+    <Link  to='/'> <AiOutlineArrowLeft className='react-icon-back' /> <span>Go Back</span> </Link> 
+    </div>
+    </div>
+
+    </div> 
+    </section>
     </div>
    
   )
