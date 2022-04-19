@@ -20,6 +20,9 @@ const query = `
         id
       symbol
       name
+      totalSupply
+      tradeVolumeUSD
+      totalLiquidity
     }
   }
   `
@@ -60,18 +63,36 @@ function TokensList() {
   return (
     <div className='main-page'>
     <Navbar />
-    <h2>Token List</h2>
+    <h2>Explore Tokens</h2>
     <Searchbar  search={searchFilter} />
+    <section className='tokens-display'>
     {displayTokens.map((token)=>{
         return(
-            <div>
-            <h2><Link to={`/${token.id}`}>{token.name}</Link></h2>
-            <h3>{token.symbol}</h3>
+            <div className='token-container'>
+            <h3>{token.name} ({token.symbol})</h3>
+            <div className='financial-info'>
+            <div className='info'>
+            <p>Total supply:</p>
+            <p>{token.totalSupply}</p>
+            </div>
+            <div className='info'>
+            <p>Trade VolumeUSD:</p>
+            <p>{Number(token.tradeVolumeUSD).toFixed(2)}</p>
+            </div>
+            <div className='info'>
+            <p>Liquidity:</p>
+            <p>{Number(token.totalLiquidity).toFixed(2) }</p>
+            </div>
+            </div>
+            <div className='div-button'><button className='token-pairs-btn'><Link  to={`/${token.id}`}>Swap options</Link></button></div>
+            
+            
             </div>
             
 
         )
     })}
+    </section>
 
     </div>
   )

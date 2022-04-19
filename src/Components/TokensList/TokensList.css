@@ -2,3 +2,69 @@
     width: 100vw;
     background-color: #191B1F;
 }
+
+.main-page h2{
+    color: white;
+    margin: 60px;
+    font-weight: 700, Bold;
+}
+
+.tokens-display{
+    display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+    justify-content: center;
+}
+
+.token-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+
+
+    width: 370px;
+    height: 350px;
+    background-color: #40364B;
+    margin: 20px;
+    border-radius: 15px;
+}
+.token-container h3{
+    display: flex;
+    margin-left: 10px;
+    color: #E80D71;
+    font-weight:  600, Semi Bold;
+    font-size: 18px;
+    
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.info p{
+    display: flex;
+    margin: 10px;
+    width: 142px;
+}
+.div-button{
+    display: flex;
+    justify-content: center;
+}
+.token-pairs-btn{
+   
+    background-color: #4C4D8F;
+    
+    width: 160px;
+    height: 38px;
+    border-radius: 6px;
+    border-style: none;
+
+}
+.token-pairs-btn a{
+    color: white;
+    text-decoration: none;
+}
+.token-pairs-btn a:hover {
+color: white;
+}

@@ -1,23 +1,26 @@
 
 
 .searchbar-div {
-    background-color: rgba(189, 186, 186, 0.332);
+    background-color:  #191B1F;
     display: flex;
     justify-content: space-between;
-    border: none;
+    border-style: ridge;
+    margin: 50px;
+    
     width: 280px;
     height: 45px;
-    border-radius: 6px;
+    border-radius: 15px;
     
 }
 .searchbar-div input{
     height: 100%;
     width: 80%;
+    color: white;
     border-radius: 6px;
     font-size: 16px;
     border: none;
     background-color: rgba(189, 186, 186, 0);
-    padding-left: 15px;
+   
 }
 .searchbar-div input:focus{
     outline: none;
@@ -25,5 +28,6 @@
 .searchbar-div .serch-icon{
     font-size: 23px;
     margin-top: 10px;
-    margin-right: 5px;
+    margin-left: 5px;
+    color: #E80D71;
 }
