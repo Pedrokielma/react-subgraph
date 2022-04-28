@@ -10,4 +10,4 @@
 
 
 
-TokenSwap is an application to facilitate important information from Uniswap. The application is intended to help Uniswapp users check up-to-date information regarding the price, supply and liquidity of each token, as well as the tokens available for exchange and the liquidity of each pair.
+TokenSwap is an application to facilitate important information from Uniswap. This application is intended to help Uniswapp users check up-to-date information regarding the price, supply and liquidity of each token, as well as the tokens available for exchange and the liquidity of each pair.
